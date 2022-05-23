@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: qa-promo
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: qa-promo
+  source:
+    repoURL: https://github.com/jeromedecoster/gitops-environment-promotion.git
+    targetRevision: HEAD
+    path: envs/qa
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: qa-promo
