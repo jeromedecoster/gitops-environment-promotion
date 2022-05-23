@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: qa-promo
+  name: qa-promo2
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: qa-promo
+  project: qa-promo2
   source:
     repoURL: https://github.com/jeromedecoster/gitops-environment-promotion.git
     targetRevision: HEAD
