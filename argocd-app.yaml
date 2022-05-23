@@ -13,4 +13,4 @@ spec:
     path: envs/qa
   destination:
     server: https://kubernetes.default.svc
-    namespace: qa-promo
+    namespace: qa
